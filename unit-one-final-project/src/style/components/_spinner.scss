@@ -1,0 +1,19 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.spinner{
+    $spinner-grad: linearGradient($grey-4, $primary-4); 
+    @include box(150px);
+    @include center-auto;
+    border: 3px solid $grey-8;
+    border-radius: 50%;
+    border-top-color: $primary-4;
+    animation: spinner 1s ease-out infinite;
+
+    @keyframes spinner {
+        to{
+            transform: rotate(360deg)
+        }
+    }
+}

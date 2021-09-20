@@ -1,0 +1,80 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: $primary-8;
+    color: $black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+.section {
+    // width: 90vw;
+    margin: 0 auto;
+    @include flex-center-column;
+    max-width: $max-width;
+}
+@include large {
+    .section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+}
+
+
+.container{
+    width: 90vw;
+    margin: 5rem 0;
+    max-width: $max-width;
+    background: $white;
+    border-radius: $radius;
+    display: grid;
+    padding: 1.5rem 2rem;
+    box-shadow: $dark-shadow;
+
+
+    h3{
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 2rem;
+        margin-right: 5rem;
+    }
+    button {
+        color: $primary-4;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-color: transparent;
+        background: lightgrey;
+        margin: 5px auto;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        letter-spacing: $spacing;
+        border-radius: 50%;
+        outline: none;
+    }
+    .buttons{
+        @include flex-center;
+    }
+    header{
+        width: 90%;
+    }
+}
+@include large {
+    .container{
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+.underline {
+    @include box(20rem, 0.25rem);
+    @include center-auto;
+    background: $primary-4;
+}
