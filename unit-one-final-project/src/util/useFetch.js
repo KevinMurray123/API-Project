@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-const API_ENDPOINT = `https://api.publicapis.org/`
+const API_ENDPOINT = `https://api.publicapis.org/entries?`
 
 export const useFetch = (searchQuery) => {
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState({show: false, msg: ""});
     const [apis, setApis] = useState(null)
 
 
@@ -11,10 +12,11 @@ export const useFetch = (searchQuery) => {
         try {
             const response = await fetch(url);
             const data = await response.json();
-
-            if(data.Response === "True") {
-                setApis(data.Search || data);
-                
+            console.log(data);
+            if(data.entries === 0){
+                setError({show:true, msg: 'No Results'})
+            }else{
+                setApis(data.entries);
             }
             setLoading(false)
 
@@ -28,5 +30,5 @@ export const useFetch = (searchQuery) => {
         fetchAPI(`${API_ENDPOINT}${searchQuery}`)
     }, [searchQuery])
 
-    return {loading, error, apis};
+    return {loading, apis};
 }

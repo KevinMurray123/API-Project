@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useApiContext } from '../util/useContext'
 
 const SearchBar = () => {
+    const {query, setQuery} = useApiContext();
     return (
         <div className='search-bar'>
             <form onSubmit = {(e) => e.preventDefault()} className="search-form">
@@ -9,10 +11,7 @@ const SearchBar = () => {
             className="form-input"
             value={query}
             onChange={(e) => setQuery(e.target.value)}/>
-            {error.show && <div className="error">
-                {error.msg}    
-            </div>}
-        </form>
+            </form>
         </div>
     )
 }
