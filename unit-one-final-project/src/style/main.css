@@ -227,7 +227,7 @@ main {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-image: linear-gradient(#b1d8ec, #78bcdd);
+  background: #b1d8ec;
   color: #222;
   line-height: 1.5;
   font-size: 0.875rem;
@@ -254,8 +254,7 @@ body {
 }
 .container {
   width: 90vw;
-  margin: 5rem 0;
-  max-width: 1170px;
+  margin: 2rem auto;
   background: #fff;
   border-radius: 0.25rem;
   display: grid;
@@ -292,11 +291,6 @@ body {
   width: 90%;
 }
 
-@media only screen and (min-width: 1024px) {
-  .container {
-    grid-template-columns: 200px 1fr;
-  }
-}
 .underline {
   width: 20rem;
   height: 0.25rem;
@@ -309,7 +303,7 @@ body {
   width: 90vw;
   max-width: 1170px;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 0rem;
   margin-bottom: 3rem;
 }
 .search-form .form-input {
@@ -341,56 +335,10 @@ body {
   font-size: 1rem;
   width: 8rem;
   letter-spacing: 0.1rem;
-  margin-top: 2rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin: 2rem auto;
   transition: all 0.5s linear;
 }
 .btn:hover {
   background: #78bcdd;
   color: #2e8ab8;
-}
-
-.single-movie {
-  width: 90vw;
-  max-width: 1170px;
-  min-height: 100vh;
-  display: grid;
-  align-items: center;
-  margin: 0 auto;
-  gap: 2rem;
-}
-.single-movie img {
-  width: 350px;
-  margin: 0 auto;
-  display: block;
-}
-.single-movie p {
-  font-size: 1.2rem;
-}
-.single-movie .btn {
-  text-transform: capitalize;
-  padding: 0.25rem 0.5rem;
-  background: #5cadd6;
-  color: #fff;
-  border-radius: 0.25rem;
-  display: inline-block;
-  letter-spacing: 0.1rem;
-  width: auto;
-}
-.single-movie .page-error {
-  min-height: 100vh;
-  display: grid;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
-}
-
-@media only screen and (min-width: 1024px) {
-  .single-movie {
-    grid-template-columns: 1fr 2fr;
-    margin-top: 1.5rem;
-    line-height: 1.8;
-  }
 }/*# sourceMappingURL=main.css.map */

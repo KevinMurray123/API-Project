@@ -3,7 +3,6 @@ const API_ENDPOINT = `https://api.publicapis.org/entries?`
 
 export const useFetch = (searchQuery) => {
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState({show: false, msg: ""});
     const [apis, setApis] = useState(null)
 
 
@@ -13,8 +12,8 @@ export const useFetch = (searchQuery) => {
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
-            if(data.entries === 0){
-                setError({show:true, msg: 'No Results'})
+            if(data.entries === null){
+                
             }else{
                 setApis(data.entries);
             }
