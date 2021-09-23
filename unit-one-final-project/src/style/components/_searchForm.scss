@@ -11,13 +11,14 @@
     .form-input {
         width: 100%;
         border: transparent;
-        width: $fixed-width;
+        
         background: $white;
         font-size: 1rem;
         border-radius: $radius;
         color: $grey-3;
         letter-spacing: $spacing;
         margin-top: 1rem;
+        margin: 0 auto;
     }
     .error{
         color: $dark-red;

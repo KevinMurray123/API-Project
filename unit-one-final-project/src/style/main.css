@@ -247,6 +247,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 3rem;
     border-radius: 3px;
     font-weight: bold;
@@ -309,13 +310,13 @@ body {
 .search-form .form-input {
   width: 100%;
   border: transparent;
-  width: 620px;
   background: #fff;
   font-size: 1rem;
   border-radius: 0.25rem;
   color: #7a5c8a;
   letter-spacing: 0.1rem;
   margin-top: 1rem;
+  margin: 0 auto;
 }
 .search-form .error {
   color: #ba2626;
@@ -337,6 +338,7 @@ body {
   letter-spacing: 0.1rem;
   margin: 2rem auto;
   transition: all 0.5s linear;
+  text-align: center;
 }
 .btn:hover {
   background: #78bcdd;

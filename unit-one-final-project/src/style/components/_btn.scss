@@ -14,6 +14,7 @@
     letter-spacing: $spacing;
     margin: 2rem auto;
     transition: $transition;
+    text-align: center;
     &:hover{
         background: $primary-6;
         color: $primary-3;

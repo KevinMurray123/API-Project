@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-const API_ENDPOINT = `https://api.publicapis.org/entries?`
+const API_ENDPOINT = `https://api.publicapis.org/`
 
 export const useFetch = (searchQuery) => {
     const [loading, setLoading] = useState(true);
