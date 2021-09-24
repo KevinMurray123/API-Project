@@ -245,7 +245,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
@@ -323,6 +323,9 @@ body {
   text-transform: capitalize;
   padding-top: 0.5rem;
   letter-spacing: 0.1rem;
+}
+.search-form h2 {
+  text-align: center;
 }
 
 .btn {

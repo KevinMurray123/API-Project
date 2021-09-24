@@ -7,8 +7,8 @@ const apiContext = React.createContext();
 export const ApiProvider = ({children}) => {
     const [query, setQuery] = useState('');
     const {apis , loading} = useFetch(`entries?title=${query}&`);
-    const {apis: api} = useFetch(`random?`)
-    return (<apiContext.Provider value={{query, setQuery, loading, apis, api}}>
+    
+    return (<apiContext.Provider value={{query, setQuery, loading, apis}}>
         {children}
     </apiContext.Provider>)
 }

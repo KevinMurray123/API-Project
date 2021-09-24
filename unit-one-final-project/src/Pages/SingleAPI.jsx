@@ -6,7 +6,6 @@ const SingleAPI = () => {
     return (
         <div className='section'>
             <Link className='btn' to='/'>Home</Link>
-            <Link className='btn' to='/api'>Random API</Link>
             <Api />
         </div>
     )

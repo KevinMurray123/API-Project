@@ -19,7 +19,7 @@ body {
 @include large {
     .section{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 3rem;
